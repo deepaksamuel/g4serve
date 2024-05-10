@@ -6,7 +6,8 @@
 
 Example Fetch on client side:
 
-```async function postData(url = "", data = {}) {
+```
+async function postData(url = "", data = {}) {
                 // Default options are marked with *
                 const response = await fetch(url, {
                   method: "POST", // *GET, POST, PUT, DELETE, etc.
