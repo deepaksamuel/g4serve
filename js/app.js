@@ -14,12 +14,13 @@ app.use(cors(corsOptions));
 
 
 
+// dont delete this function
 app.use(function(req, res, next) {
-  console.log("use received");
+  // console.log("use received");
   // res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5500"); // update to match the domain you will make the request from
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   // res.send("");
-  console.log(req.body);
+  // console.log(req.body);
   next();
 });
 
@@ -29,6 +30,7 @@ app.post('/', function (req, res) {
   res.header("Access-Control-Allow-Origin", "http://127.0.0.1:5500"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
+  console.log("Received message from client:");
   console.log(req.body);
 
   const child_process = require('child_process');

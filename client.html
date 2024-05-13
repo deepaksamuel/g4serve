@@ -1,29 +1,14 @@
-Demostration of a server, which recieves a POST request from  client (with CORS enabled) and runs a CPP program on the server and returns the answer in JSON format:
+<!DOCTYPE html>
+<html>
+<body>
+<p id="p1">Waiting for G4 server!</p>
+<p id="p2">No message received from server!</p>
 
-```{g4output: 'running' }```
+</body>
+<script>
 
-To run it, follow the instructions
+const element = document.getElementById("p2");
 
-
-
-```cd js```  
-```g++ main.cpp```  
-```npm init```  
-```npm install express --save```  
-```node app.js```
-
-
-Your client should have a javascript function like the following. In case the request was successful, the client should receive 
-```{g4output: 'running' }```
-
-and print
-```{g4output: 'running' }``` on the console.
-
-Your client can be on another server!
-
-Example Fetch on client side:
-
-```
 async function postData(url = "", data = {}) {
                 // Default options are marked with *
                 const response = await fetch(url, {
@@ -44,7 +29,8 @@ async function postData(url = "", data = {}) {
               
               postData("http://127.0.0.1:3000/", { answer: 42 }).then((data) => {
                 console.log(data); // JSON data parsed by `data.json()` call
+                p2.innerHTML="Received message from server: " + data.g4output;
               });
-```
 
-You can use this to run a cpp programme on your server, get the results and push it to your client!
+</script>
+</html>
