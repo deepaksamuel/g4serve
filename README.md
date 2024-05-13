@@ -21,6 +21,9 @@ and print
 
 Your client can be on another server!
 
+A sample client is in ```client.html```. Open it using your five server.
+
+
 Example Fetch on client side:
 
 ```

@@ -27,7 +27,7 @@ async function postData(url = "", data = {}) {
                 return response.json(); // parses JSON response into native JavaScript objects
               }
               
-              postData("http://127.0.0.1:3000/", { answer: 42 }).then((data) => {
+              postData("http://127.0.0.1:3000/", { Client: "Hi" }).then((data) => {
                 console.log(data); // JSON data parsed by `data.json()` call
                 p2.innerHTML="Received message from server: " + data.g4output;
               });
